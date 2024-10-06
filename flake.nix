@@ -10,9 +10,10 @@
 	in
 	{
 		devShells.${system} = {
-			neovim = pkgs.mkShell {
+			zellij = pkgs.mkShell {
 				name = "zellij";
 				packages = [
+					pkgs.figlet
 					pkgs.zellij
 				];
 				shellHook = ''echo "Zellij" | figlet'';
